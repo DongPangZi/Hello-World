@@ -1,0 +1,338 @@
+<!DOCTYPE html>
+<html lang="zh-cn">
+<head>
+	<title>jstest</title>
+	<meta charset="utf-8">
+	<meta name="Viewport" content="width=device-width,initial-scale=1">
+	<script type="text/javascript" src="jquery-3.1.1.js"></script>
+	<link rel="stylesheet" type="text/css" href="bootstrap.css">
+	<link rel="stylesheet" type="text/css" href="myCss.css">
+	<script type="text/javascript" src="bootstrap.js"></script>
+	<style type="text/css">
+		/*h2{color: blue}*/
+	</style>
+</head>
+<body>
+<!-- <h2>Summary of bookings</h2> -->
+<!-- <script type="text/javascript">
+	var Myarr=new Array(10);
+	var newArr=new Array(Myarr.length*2);
+	for (var i = 0; i < Myarr.length; i++) {
+		newArr[i]=Myarr[i];
+	}
+	Myarr=newArr;
+	alert(Myarr.length);
+</script>
+ -->
+<!-- <script type="text/javascript">
+	var names=new Array("Paul","Jeremy","NIck");
+	var ages=new Array(31,30,31);
+	var concatArray=names.concat(ages);
+	for (var i = 0; i < concatArray.length; i++) {
+		if(i=3)
+			document.write("<br>"+concatArray[i]+" ");
+		else
+			document.write(concatArray[i]+" ");
+	}
+</script> -->
+<!-- <script type="text/javascript">
+	function isLessThan3(value,index,array){
+		return(value<3);
+	}
+	var myArray=new Array(1,2,3,4,5);
+	document.write(myArray.some(isLessThan3));
+</script> -->
+<!-- <script type="text/javascript">
+	function CustomerBooking (bookingId,customerName,film,showDate){
+		this.bookingId=bookingId;
+		this.customerName=customerName;
+		this.film=film;
+		this.showDate=showDate;
+		CustomerBooking.prototype.setBookingId=function(bookingId){
+			this.bookingId=bookingId;
+		};
+
+		CustomerBooking.prototype.getBookingId = function() {
+			return this.bookingId;
+			// body...
+		};
+		CustomerBooking.prototype.setCustomerName = function() {
+			this.customerName=customerName;
+			// body...
+		};
+		
+		CustomerBooking.prototype.getCustomerName = function() {
+			return this.customerName;
+		};
+		CustomerBooking.prototype.setFilm = function() {
+			this.film=film;
+		};
+		CustomerBooking.prototype.getFilm = function() {
+			return this.film;
+			// body...
+		};
+		CustomerBooking.prototype.setShowDate = function() {
+			this.showDate=showDate;
+		};
+		CustomerBooking.prototype.getShowDate = function(){
+			return showDate;
+		};
+
+	}
+	// Cinema type
+	function Cinema(){
+		this.bookings = new Array();
+		Cinema.prototype.addBooking = function(bookingId,customerName,film,showDate) {
+			this.bookings[bookingId]=new CustomerBooking(bookingId,customerName,film,showDate);
+
+		};
+		Cinema.prototype.getBookingTable = function() {
+			var booking;
+			var tableHtml="<table border=1>";
+
+			for(booking in this.bookings){
+				tableHtml+="<tr><td>";
+				tableHtml+=this.bookings[booking].getBookingId();
+				tableHtml+="</td>";
+
+				tableHtml+="<td>";
+				tableHtml+=this.bookings[booking].getCustomerName();
+				tableHtml+="</td>";
+
+				tableHtml+="<td>";
+				tableHtml+=this.bookings[booking].getFilm();
+				tableHtml+="</td>";
+
+				tableHtml+="<td>";
+				tableHtml+=this.bookings[booking].getShowDate();
+				tableHtml+="</td></tr>";
+			}
+			tableHtml+="</table>";
+			return tableHtml;
+		};
+	}
+	var myCinema=new Cinema();
+	myCinema.addBooking(342,"奇异博士","Fu","21 November 2016 10:25");
+	myCinema.addBooking(343,"从你的全世界路过","Gao","21 November 2016 10:25");
+	document.write(myCinema.getBookingTable());
+</script> -->
+<!-- <form id="myForm" name="myForm">
+<input type="button" name="testButton" value="测试按钮" onclick="testButton_onclick()"/>
+<br>
+<label name="myLabel" value="0"></label>
+	
+</form>
+<script src="MyJS.js">
+	
+</script> -->
+<!-- <div id="display"></div>
+<img src="img1.jpg" name="adverImg">
+<script type="text/javascript">
+	var currentImgNumber=1;
+	var NumberOfImg=3;
+	function window_onload(){
+		setTimeout("swithImage()",3000);
+
+	}
+	function swithImage(){
+		currentImgNumber++;
+		document.adverImg.src='img'+currentImgNumber+'.jpg';
+		if (currentImgNumber<NumberOfImg) {
+			setTimeout("swithImage()",3000);
+		}
+	}
+</script> -->
+
+<!-- <p ondblclick="handle(event)">i love cats</p>
+<h1 onclick="handle(event)">hahahaha
+</h1>
+<span onmouseover="handle(event)">specical sth</span>
+<script type="text/javascript">
+	function handle(e){
+		alert(e.type);
+	}
+</script> -->
+<!-- <script type="text/javascript">
+	$(document).ready(function(){
+		alert("1234	");
+	});
+</script>
+ -->
+ <!-- <style type="text/css">
+ 	input{
+ 		padding-left: 70px;
+ 	}
+ </style> -->
+<!-- <form>
+	可用元素：&nbsp<input type="text" name="text1" value="可用文本框"/>
+	<br/>
+	不可用元素：<input type="text" name="text2" disabled="disabled" value="不可用文本框"/> <br/>
+	<input type="checkbox" name="cb" value="test1">test1
+	<input type="checkbox" name="cb" value="test2">test2
+	<br>
+	<br>
+	<input type="file" name="">
+	<br>
+	<select>
+		<option>1</option>
+		<option>2</option>
+
+	</select>
+
+</form> -->
+<!-- <form role="form">
+  <div class="form-group">
+    <label for="name">名称</label>
+    <input type="text" class="form-control" id="name" placeholder="请输入名称">
+  </div>
+  <div class="form-group">
+    <label for="inputfile">文件输入</label>
+    <input type="file" id="inputfile">
+    <p class="help-block">这里是块级帮助文本的实例。</p>
+  </div>
+  <div class="checkbox">
+    <label>
+      <input type="checkbox">请打勾
+    </label>
+  </div>
+  <button type="submit" class="btn btn-default">提交</button>
+  <div class="container">
+	<h2>按钮</h2>
+	<p>.btn-link 类让按钮看起来像个链接（仍然保持按钮的行为） :</p>                        
+	<button type="button" class="btn-link">链接</button>
+</div>
+</form> -->
+<!-- <p>你最喜欢的水果是：</p>
+<ul>
+	<li>柜子</li>
+	<li>123</li>
+	<li>md</li>
+</ul>
+<script type="text/javascript">
+	var $a= $("ul li:eq(0)");
+	var a=$a.text();
+	alert(a);
+</script> -->
+<!-- <form role="form">
+<a href="" title="This is a tip" class="tooltip"><button type="button" class="btn btn-danger">123</button></a>
+</form>
+<script type="text/javascript">
+	
+$(function(){
+	var x=10;
+	var y=20;
+
+	$("form a.tooltip").mouseover(function(e){
+		this.myTitle = this.title;
+		this.title="";
+		var tooltip1="<div id='tooltip'>"+this.myTitle+"</div>";
+		$("body").append(tooltip1);
+		$("#tooltip").css({
+			"top": (e.pageY+y)+"px",
+			"left": (e.pageX+x)+"px"
+		}).show("fast");
+}).mouseout(function(){
+	this.title-this.myTitle;
+	$("#tooltip").remove();
+});
+})
+</script> -->
+
+<!-- <ul>
+	<li>
+		<a href="img1.jpg" class="tooltip" title="img1"><img src="img1.jpg" alt="picture1"></a>
+	</li>
+	<li>
+		<a href="img2.jpg" class="tooltip" title="img2"><img src="img2.jpg" alt="picture2"></a>
+	</li>
+	<li>
+		<a href="img3.jpg" class="tooltip" title="img3"><img src="img3.jpg" alt="picture3"></a>
+	</li>
+</ul> -->
+ 
+<!-- <script type="text/javascript">
+	$(function(){
+		var x=10;
+		var y=20;
+		$("a.tooltip").mouseover(function(e){
+			this.myTitle = this.title;
+			this.title="";
+			var imgTitle = this.myTitle?"<br/>"+this.myTitle:"";
+			var tooltip = "<div id='tooltip'><img src=''"+this.href+"'alt='yulangtu'/>"+imgTitle+"</div>";
+			$("body").append(tooltip);
+		$("#tooltip").css({
+			"top": (e.pageY+y)+"px",
+			"left": (e.pageX+x)+"px"
+		}).show("fast");
+
+		}).mouseout(function(){
+	this.title=this.myTitle;
+	$("#tooltip").remove();
+}).mousemove(function(e){
+	$("#tooltip").css({
+		"top": (e.pageY+y)+"px",
+		"left": (e.pageX+x)+"px"
+	});
+});
+	})
+</script> -->
+<!-- <style type="text/css">	
+h5{
+	display: none;
+}
+</style>
+<h5>fhahfuhauhfuahufhuahfauh</h5>
+<div class="content">
+	contentcontentcontentcontentcontentcontentcontentcontentcontentcontent
+</div>
+<script type="text/javascript">
+	$(function(){
+		$("h5").toggle(function(){
+			$(this).next("div.content").slideUp();
+		},function(){$(this).next("div.content").slideDown();}
+			)
+		};
+	})
+</script> -->
+<!-- <div id="panel"></div>
+<script type="text/javascript">
+	$(function(){
+	$("#panel").click(function(){
+		$(this).animate({left:"500px"}, 3000);
+	});
+});
+</script> -->
+<!-- h2>在JavaScript中穿件JSON对象</h2>
+<p>
+	Name:<span id="name"></span><br>
+	Age:<span id="age"></span><br>
+	Address:<span id="address"></span><br>
+	Phone:<span id="phone"></span><br>
+</p>
+<script type="text/javascript">
+	var JSONObject={
+		"name":"Ge Chengkai",
+		"street":"1 Linghang Road",
+		"age":22,
+		"phone":"000000000"
+	};
+	document.getElementById("name").innerHTML=JSONObject.name;
+	document.getElementById("age").innerHTML=JSONObject.age;
+	document.getElementById("address").innerHTML=JSONObject.street;
+	document.getElementById("phone").innerHTML=JSONObject.phone;
+</script> -->
+<!-- <div ng-app="" ng-init="firstName='John'">
+
+<p>在输入框中尝试输入:</p>
+<p>姓名: <input type="text" ng-model="firstName"></p>
+<p>你输入的为: {{ firstName }}</p>
+
+</div> -->
+<form action="http:\\localhost\gp.php" method="post">
+	<p>姓名：<input type="text" name="name"/></p>
+	<p>年龄：<input type="text" name="age"/></p>
+	<p><input type="submit" name="submit" value="提交"></p>
+</form>
+<script src="https://cdn.static.runoob.com/libs/angular.js/1.4.6/angular.min.js"></script>
+</body>
+</html>
