@@ -1,0 +1,6 @@
+/* mac下修改hosts文件   */
+/*hosts用来存储域名和IP地址的对应 */
+sudo vim /etc/hosts
+i /* edit the hosts*/
+esc+shift+wq 
+wq /*save the changes*/
